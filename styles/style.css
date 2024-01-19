@@ -1,0 +1,124 @@
+@font-face{
+    font-family: Burbank Big Condensed;
+    src: url(../font/fortnite/Burbank\ Big\ Condensed\ Black.otf);
+}
+.bg{
+  
+    background-image: url(../images/Sheldonfortnite\ 1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative; 
+     height: 850px;
+     
+
+}
+.rulesBtn{
+    display: flex;
+    justify-content: center;
+    margin-right: 40%;
+    /* padding-top: 1%;  */
+}
+.btn{
+    background-color: #D9D9D9!important;
+    border-radius: 300px!important;
+  color: #000000;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 60px;
+  width: 450px;
+  height: 60px;
+
+}
+
+.dropdown-menu{
+  right: 10px!important;
+   background-color:#003380 !important; 
+   width: 700px!important;
+   padding: 50% !important;
+   color: white !important;
+   margin-right: 100%!important;
+}
+.mar{
+    padding-top: 150px;
+}
+.navbar-brand{
+    color: white ;
+    font-weight: bolder;
+}
+.navBarCol{
+    background-color: #4260FF;
+    /* height: 50px!important; */
+}
+.blueBg{
+    background-image: url(../images/ab94i3q4agk21\ 2.png) ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative; 
+    height: 850px;
+}
+.fixedImg{
+    position: absolute;
+  top: 425px;
+  right: 85%;
+}
+.fixedPlay{
+    position: absolute;
+  top: 442px;
+  right: 83%;
+  text-align: center;
+}
+.fixedPlay2{
+    position: absolute;
+  top: 345px;
+  left: 82%;
+  text-align: center;
+}
+.padTxt{
+    margin-bottom: 30px;
+}
+.txtImg{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.bg2{
+    background-image: linear-gradient(to right, rgba(0, 17, 255, 0.748), rgb(0, 242, 255));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative; 
+     height: 25px;
+}
+.fontCenter{
+    height: 75px;
+    width: 80%;
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+body{
+    overflow-x: hidden;
+}
+.btnCenter{
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 70px;
+}
+.box{
+  background-color: #061357; 
+  height: 400px;
+}
+.pad{
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+.m{
+    padding-right: 5%;
+    padding-left: 5%; 
+}
