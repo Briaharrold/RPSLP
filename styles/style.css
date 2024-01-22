@@ -141,6 +141,10 @@ position: absolute;
     margin-top: 13%;
     margin-left: 40%;
 }
+.fColor{
+    color: white;
+    padding-top: 15%;
+}
 .fontCenter{
     height: 75px;
     width: 80%;

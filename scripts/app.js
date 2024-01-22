@@ -32,7 +32,6 @@ let gameCpu =document.getElementById("gamecpu");
 let endScreen =document.getElementById("endScreen");
 
 
-let scoreCounter = 0;
 let playerIsTrue = true;
 let playerOneTurn = true;
 let maxScore = 1;
@@ -41,6 +40,7 @@ let p2Points = 0;
 let choice1;
 let choice2;
 let chosenRound;
+//set func
 // -------------------------------------CPU 1v1--------------------------------------------------------
 twoPlaybtn.addEventListener('click', function (e) {
     playerIsTrue = true;
@@ -49,7 +49,6 @@ twoPlaybtn.addEventListener('click', function (e) {
     gameScreen.style.display = "none";
     gameCpu.style.display = "none";
     endScreen.style.display = "none";
-   
 })
 cpuPlaybtn.addEventListener('click', function (e) {
     playerIsTrue = false;
@@ -58,15 +57,24 @@ cpuPlaybtn.addEventListener('click', function (e) {
     gameScreen.style.display = "none";
     gameCpu.style.display = "none";
     endScreen.style.display = "none";
+    if(oneRound ,cpuPlaybtn == true)
+{
+    console.log("both buutuons are clicked");
+}
 })
 // ----------------------------------ROUND OPTIONS-----------------------------------------------------------
 oneRound.addEventListener('click', function (e) {
     modeScreen.style.display = "none";
     roundScreen.style.display = "none";
-    gameScreen.style.display = "inline";
+    gameScreen.style.display = "block";
     endScreen.style.display = "none";
     gameCpu.style.display = "none";
-    maxScore = 1;
+    if(maxScore !== 1){
+        maxScore = 1;
+        p1Wins = 0;
+        p2Wins = 0;
+        console.log(maxScore);
+    }
 })
 fiveRounds.addEventListener('click', function (e) {
     modeScreen.style.display = "none";
@@ -83,10 +91,11 @@ sevenRounds.addEventListener('click', function (e) {
     gameScreen.style.display = "block";
     endScreen.style.display = "none";
     gameCpu.style.display = "none";
-    //body.className = "gameBg"
     maxScore = 4;
 })
+
 //-------------------------------game--------------------------------------------------------------
+
 player1ChoiceRock.addEventListener('click', async () => {
     if (playerOneTurn && playerIsTrue) {
         choice1 = 'rock';
@@ -134,8 +143,7 @@ player1ChoiceSis.addEventListener('click', async () => {
         choice2 = await computer();
         compare(choice1, choice2);
        
-    } else if (playerOneTurn === false && playerIsTrue === true) {
-        textOnScreen.textContent = "Player 1's Turn"
+    } else if (playerOneTurn === false && playerIsTrue === true) {   
         choice2 = 'scissors';
         playerOneTurn = true;
         compare(choice1, choice2);
@@ -144,7 +152,6 @@ player1ChoiceSis.addEventListener('click', async () => {
 })
 player1ChoiceLiz.addEventListener('click', async () => {
     if (playerOneTurn && playerIsTrue) {
-        textOnScreen.textContent = "Player 2's Turn"
         choice1 = 'lizard';
         playerOneTurn = false;
     } else if (playerOneTurn && playerIsTrue === false) {
@@ -155,7 +162,6 @@ player1ChoiceLiz.addEventListener('click', async () => {
         compare(choice1, choice2);
      
     } else if (playerOneTurn === false && playerIsTrue === true) {
-        textOnScreen.textContent = "Player 1's Turn"
         choice2 = 'lizard';
         playerOneTurn = true;
         compare(choice1, choice2);
@@ -165,7 +171,6 @@ player1ChoiceLiz.addEventListener('click', async () => {
 
 player1ChoiceSpock.addEventListener('click', async () => {
     if (playerOneTurn && playerIsTrue) {
-        textOnScreen.textContent = "Player 2's Turn"
         choice1 = 'spock';
         playerOneTurn = false;
     } else if (playerOneTurn && playerIsTrue === false) {
@@ -174,15 +179,17 @@ player1ChoiceSpock.addEventListener('click', async () => {
 
         choice2 = await computer();
         compare(choice1, choice2);
+
        
     } else if (playerOneTurn === false && playerIsTrue === true) {
-        textOnScreen.textContent = "Player 1's Turn"
+
         choice2 = 'spock';
         playerOneTurn = true;
         compare(choice1, choice2);
         
     }
 })
+
 
 
 async function computer() {
@@ -192,5 +199,3 @@ async function computer() {
 
     return data.toLowerCase();
 }
-
-
