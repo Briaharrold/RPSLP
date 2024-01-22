@@ -25,14 +25,14 @@ let oneV1Playbtn = document.getElementById("1v1Playbtn")
 let cpuPlaybtn = document.getElementById("cpuPlaybtn")
 let twoPlaybtn = document.getElementById("twoPlaybtn");
 //---------------------PAGES----------------------------------
-let homeScreen= document.getElementById("home");
 let modeScreen= document.getElementById("Mode");
 let roundScreen= document.getElementById("RoundPage");
 let gameScreen= document.getElementById("game");
 let gameCpu =document.getElementById("gamecpu");
 let endScreen =document.getElementById("endScreen");
-let scoreCounter = 0;
 
+
+let scoreCounter = 0;
 let playerIsTrue = true;
 let playerOneTurn = true;
 let maxScore = 1;
@@ -41,59 +41,48 @@ let p2Points = 0;
 let choice1;
 let choice2;
 let chosenRound;
-//-------------------------------------------------------------
-readyBtn.addEventListener("click",(e)=>{
-    homeScreen.style.display = "none"
-    roundScreen.style.display = "none"
-    gameScreen.style.display = "none"
-    gameCpu.style.display = "none"
-});
 // -------------------------------------CPU 1v1--------------------------------------------------------
 twoPlaybtn.addEventListener('click', function (e) {
     playerIsTrue = true;
-    homeScreen.style.display = "none"
-    modeScreen.style.display = "none"
-    roundScreen.style.display = "block"
-    gameScreen.style.display = "none"
-    gameCpu.style.display = "none"
+    modeScreen.style.display = "none";
+    roundScreen.style.display = "block";
+    gameScreen.style.display = "none";
+    gameCpu.style.display = "none";
+    endScreen.style.display = "none";
    
 })
 cpuPlaybtn.addEventListener('click', function (e) {
     playerIsTrue = false;
-    homeScreen.style.display = "none"
-    modeScreen.style.display = "none"
-    roundScreen.style.display = "none"
-    gameScreen.style.display = "none"
+    modeScreen.style.display = "none";
+    roundScreen.style.display = "block";
+    gameScreen.style.display = "none";
+    gameCpu.style.display = "none";
+    endScreen.style.display = "none";
 })
-// ----------------------------------ROUND SCREENS-----------------------------------------------------------
+// ----------------------------------ROUND OPTIONS-----------------------------------------------------------
 oneRound.addEventListener('click', function (e) {
-    homeScreen.style.display = "none"
-    modeScreen.style.display = "none"
-    roundScreen.style.display = "none"
-    gameScreen.style.display = "block"
-    endScreen.style.display = "none"
-    gameCpu.style.display = "none"
+    modeScreen.style.display = "none";
+    roundScreen.style.display = "none";
+    gameScreen.style.display = "inline";
+    endScreen.style.display = "none";
+    gameCpu.style.display = "none";
     maxScore = 1;
-
-
 })
 fiveRounds.addEventListener('click', function (e) {
-    homeScreen.style.display = "none"
-    modeScreen.style.display = "none"
-    roundScreen.style.display = "none"
-    gameScreen.style.display = "block"
-    endScreen.style.display = "none"
-    gameCpu.style.display = "none"
+    modeScreen.style.display = "none";
+    roundScreen.style.display = "none";
+    gameScreen.style.display = "block";
+    endScreen.style.display = "none";
+    gameCpu.style.display = "none";
     maxScore = 3;
 
 })
 sevenRounds.addEventListener('click', function (e) {
-    homeScreen.style.display = "none"
-    modeScreen.style.display = "none"
-    roundScreen.style.display = "none"
-    gameScreen.style.display = "block"
-    endScreen.style.display = "none"
-    gameCpu.style.display = "none"
+    modeScreen.style.display = "none";
+    roundScreen.style.display = "none";
+    gameScreen.style.display = "block";
+    endScreen.style.display = "none";
+    gameCpu.style.display = "none";
     //body.className = "gameBg"
     maxScore = 4;
 })
@@ -185,7 +174,6 @@ player1ChoiceSpock.addEventListener('click', async () => {
 
         choice2 = await computer();
         compare(choice1, choice2);
-        textOnScreen.textContent = `Computer chose ${choice2}`
        
     } else if (playerOneTurn === false && playerIsTrue === true) {
         textOnScreen.textContent = "Player 1's Turn"
